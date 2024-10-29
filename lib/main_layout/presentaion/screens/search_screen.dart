@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:petcareapp/main_layout/presentaion/widgets/custome_search_container.dart';
 import 'package:petcareapp/main_layout/presentaion/widgets/custome_search_list.dart';
+import 'package:petcareapp/search/presentation/screens/select_specialty_screen.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -15,7 +16,24 @@ class _SearchScreenState extends State<SearchScreen> {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 100,),
+          SizedBox(height: 30,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              InkWell(
+                onTap: (){
+                  Navigator.pushNamed(context, SelectSpecialtyScreen.routename);
+
+                },
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  child: Image(image: AssetImage("assets/images/find icon.png"),),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 50,),
           Text("What Are You",style: TextStyle(color: Colors.black,fontSize: 30,fontWeight: FontWeight.bold),),
          Row(
            children: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcareapp/main_layout/presentaion/screens/layouy_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String routename = "login";
@@ -81,8 +82,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             borderRadius: BorderRadius.circular(20),
                           ),
                         ),
-                        onPressed: () {},
-                        child: const Text('Sign In'),
+                        onPressed: () {
+                          Navigator.pushNamed(context, LayoutScreen.routename);
+                        },
+                        child: const Text('Login In'),
                       ),
                     ],
                   ),
